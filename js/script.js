@@ -15,11 +15,10 @@ function searchCountries() {
 
 function showCountriesList(resp) {
     countriesList.empty();
+
     resp.forEach(function(item) {
         $('<li>').text("Kraj: " + item.name + " Stolica: " + item.capital +
-            " Populacja: " + item.population + " Kierunkowy: " + item.callingCodes).css({
-            "background-color": "blue", 
-            "color": "white"
-        }).appendTo(countriesList);
+            " Populacja: " + item.population + " Kierunkowy: " + item.callingCodes).appendTo(countriesList);
+       $(item.name).addClass('item');
     });
 };

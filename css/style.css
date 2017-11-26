@@ -14,4 +14,10 @@ button, input {
 #countries {
 	list-style-type: none;
 	display: block;
+	font-size: 32px;
+
 }
+.item {
+	color: blue;
+}
+
