@@ -17,7 +17,8 @@ button, input {
 	font-size: 32px;
 
 }
-.item {
+p {
 	color: blue;
+	display: inline-block;
 }
 
