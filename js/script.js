@@ -17,19 +17,20 @@ function showCountriesList(resp) {
     countriesList.empty();
 
     resp.forEach(function(item) {
-
-    var countryLi = $('<li><p><span>Kraj: </span></p></li>');
-    $('#countries').append(countryLi).append(item.name);
-
-    var capitaLi = $('<li><p><span>Stolica: </span></p></li>');
-    $('#countries').append(capitaLi).append(item.capital);
-
-    var popuLi = $('<li><p><span>Populacja: </span></p></li>');
-    $('#countries').append(popuLi).append(item.population);
-
-    var calLi = $('<li><p><span>Kierunkowy: </span></p></li>');
-    $('#countries').append(calLi).append(item.callingCodes);
+    var newLi = $('<li id="li"></li>');
+    var country = $('<p><span>Kraj:&nbsp</span></p>');
+    var capital = $('<p><span>Stolica:&nbsp</span></p>');
+    var population = $('<p><span>Populacja:&nbsp</span></p>');
+    var callPrefix = $('<p><span>Kierunkowy:&nbsp</span></p>');
     
 
+    
+    $('#countries').append(newLi.append(country.append(item.name)));
+    $('#countries').append(newLi.append(capital.append(item.capital)));
+    $('#countries').append(newLi.append(population.append(item.population)));
+    $('#countries').append(newLi.append(callPrefix.append(item.callingCodes)));
+
+
+    
     });
 };

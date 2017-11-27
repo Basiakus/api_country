@@ -13,12 +13,28 @@ button, input {
 }
 #countries {
 	list-style-type: none;
-	display: block;
+	display: inline-block;
 	font-size: 32px;
-
+}
+#countries li {
+	border: 1px solid black;
+   margin-bottom: 10px;
+   padding: 5px;
+   text-align: justify;
+   background-color: black;
+   border-radius: 5px;
 }
 p {
+   
 	color: blue;
-	display: inline-block;
+   font-weight: bold;
+}
+li p:after,
+li span:after {
+   content: "'";
+   color: blue;
+}
+span {
+	color: red;
 }
 
